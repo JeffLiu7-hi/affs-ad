@@ -4,8 +4,8 @@ This is the GitHub Pages site for AdVantage desktop application, used for Ethica
 
 ## Repository
 
-- (GitHub)[https://github.com/JeffLiu7-hi/advantage-ad]
-- (Pages URL)[https://jeffliu7-hi.github.io/advantage-ad]
+- [GitHub](https://github.com/JeffLiu7-hi/advantage-ad)
+- [Pages URL](https://jeffliu7-hi.github.io/advantage-ad)
 
 ## About AdVantage
 
