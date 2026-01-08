@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AdVantage - A desktop application where users can earn points by watching ads and purchase products">
+        <meta name="description" content="AdVantage - A desktop application where users can earn points by watching ads and purchase products">
     <title>AdVantage - Desktop Application</title>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+     crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
@@ -109,12 +112,25 @@
         </p>
         
         <div class="highlight">
-            <strong>Ad Integration:</strong> This application integrates EthicalAds to display privacy-friendly, non-tracking advertisements. Users watch ads within the application to earn points, which can then be used to purchase products.
+            <strong>Ad Integration:</strong> This application integrates Google AdSense to display advertisements. Users watch ads within the application to earn points, which can then be used to purchase products.
+        </div>
+        
+        <!-- Google AdSense Ad Unit -->
+        <div style="margin: 30px 0; text-align: center;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX"
+                 data-ad-slot="YOUR_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
         
         <h2>Features</h2>
         <ul class="feature-list">
-            <li>Watch ads to earn points (integrated with EthicalAds)</li>
+            <li>Watch ads to earn points (integrated with Google AdSense)</li>
             <li>Browse products from server</li>
             <li>Purchase products using earned points</li>
             <li>View purchase history</li>
@@ -129,12 +145,12 @@
             <span class="tech-badge">tkinter</span>
             <span class="tech-badge">Flask</span>
             <span class="tech-badge">SQLite</span>
-            <span class="tech-badge">EthicalAds</span>
+            <span class="tech-badge">Google AdSense</span>
         </div>
         
         <h2>Ad Display</h2>
         <p>
-            EthicalAds advertisements are displayed within the application using an embedded browser view. When users click "Watch Ad", the application opens an HTML page containing the EthicalAds integration code in the default web browser. Users must watch the ad for the specified duration (default: 30 seconds) to earn points.
+            Google AdSense advertisements are displayed within the application using a local HTTP server. When users click "Watch Ad", the application starts a local server and opens an HTML page containing the Google AdSense integration code in the default web browser. Users must watch the ad for the specified duration (default: 30 seconds) and click the completion button to earn points.
         </p>
         
         <h2>Application Architecture</h2>
@@ -152,15 +168,16 @@
             This application is designed for users who want to earn rewards by engaging with advertisements. The ad-based monetization model allows users to access products and services through ad engagement rather than direct payment.
         </p>
         
-        <h2>Privacy & Ethics</h2>
+        <h2>Ad Monetization</h2>
         <p>
-            We chose EthicalAds because of its commitment to privacy-friendly advertising without tracking. This aligns with our goal of providing a transparent and ethical ad-based rewards system.
+            This application uses Google AdSense for ad monetization. AdSense provides relevant advertisements to users, and revenue generated supports the rewards system. Users can earn points by engaging with ads displayed through the application.
         </p>
         
         <div class="footer">
-            <p>For more information about EthicalAds integration, please contact us.</p>
+            <p>For more information about Google AdSense integration, please contact us.</p>
             <p style="margin-top: 10px; font-size: 0.9em;">Repository: <a href="https://github.com/jeffliu7-hi/advantage-ad" target="_blank">jeffliu7-hi/advantage-ad</a></p>
         </div>
     </div>
 </body>
 </html>
+
