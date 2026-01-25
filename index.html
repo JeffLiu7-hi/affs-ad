@@ -99,6 +99,51 @@
             border-top: 1px solid #ddd;
             color: #7f8c8d;
         }
+        .scroll-to-bottom {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .scroll-to-bottom:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        .scroll-to-bottom:active {
+            transform: scale(0.95);
+        }
+        .scroll-to-bottom-label {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1001;
+        }
+        .scroll-to-bottom-label.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -162,7 +207,7 @@
         
         <h2>Client Ad Usage</h2>
         <p style="margin-top: 10px; text-align: center;">
-            如果你是客户端，请使用以下广告：
+            If you are a client, please use the following ad:
         </p>
         <!-- Google AdSense Ad Unit for client usage -->
         <div style="margin: 30px 0; text-align: center;">
@@ -184,5 +229,32 @@
             </p>
         </div>
     </div>
+    
+    <!-- Scroll to Bottom Button -->
+    <button class="scroll-to-bottom" onclick="scrollToBottom()" aria-label="Scroll to Ad">
+        ↓
+    </button>
+    <div class="scroll-to-bottom-label">Scroll to Ad</div>
+    
+    <script>
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Show/hide label on hover
+        const scrollButton = document.querySelector('.scroll-to-bottom');
+        const scrollLabel = document.querySelector('.scroll-to-bottom-label');
+        
+        scrollButton.addEventListener('mouseenter', function() {
+            scrollLabel.classList.add('show');
+        });
+        
+        scrollButton.addEventListener('mouseleave', function() {
+            scrollLabel.classList.remove('show');
+        });
+    </script>
 </body>
 </html>
