@@ -103,11 +103,12 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -118,6 +119,13 @@
             color: white;
             font-size: 24px;
             font-weight: bold;
+            padding: 0;
+        }
+        .scroll-to-bottom-text {
+            font-size: 10px;
+            font-weight: normal;
+            margin-top: 2px;
+            line-height: 1;
         }
         .scroll-to-bottom:hover {
             transform: scale(1.1);
@@ -232,7 +240,8 @@
     
     <!-- Scroll to Bottom Button -->
     <button class="scroll-to-bottom" onclick="scrollToBottom()" aria-label="Scroll to Ad">
-        ↓
+        <span>↓</span>
+        <span class="scroll-to-bottom-text">Scroll to Ad</span>
     </button>
     <div class="scroll-to-bottom-label">Scroll to Ad</div>
     
